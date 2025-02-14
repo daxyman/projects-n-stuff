@@ -1,0 +1,29 @@
+.container {
+  background: conic-gradient(
+    from 45deg,
+    red,
+    blue,
+    orange,
+    red
+  );
+  width: 50%;
+  height: 70%;
+  display: flex;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: solid 5px black;
+  border-radius: 15px;
+  flex-wrap: wrap;
+}
+
+.item{
+  background-color: black;
+  border-radius: 5px;
+  border: solid 3px white;
+  display: flex;
+  flex-grow: 1;
+  flex-basis: 20%;
+  min-width: 30%;
+}

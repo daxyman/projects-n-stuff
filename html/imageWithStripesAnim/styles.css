@@ -1,0 +1,66 @@
+:root {
+    --primary-rgb: 0, 165, 255; /* Define primary color */
+}
+
+body {
+    background-color: rgb(32, 28, 36); /* Set body background */
+    display: flex; /* Center the screen for better visualization */
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+}
+.screen > .screen-image{
+background-image:url(blue\ cave.jpg);    
+height: 100%;
+width: 100%;
+background-size: 150%;
+filter: sepia(100%) hue-rotate(150deg);
+opacity: 0.6;
+animation: pan-image 20s linear infinite;
+}
+
+@keyframes pan-image {
+    from {
+        background-position: 0% 0%;
+    }
+    to {
+        background-position: 100% 100%; /* Move background vertically */
+    }
+}
+
+.screen {
+    width: 500px;
+    aspect-ratio: 10 / 16; /* Maintain the aspect ratio */
+    border: 3px solid rgba(var(--primary-rgb), 0.8); /* Semi-transparent border */
+    border-radius: 1rem;
+    background-color: rgba(var(--primary-rgb), 0.15); /* Semi-transparent background */
+    overflow: hidden; /* Clip content inside the screen */
+    position: relative; /* Required for child absolute positioning */
+}
+
+.screen-overlay {
+    position: absolute; /* Position relative to .screen */
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-size: 100% 9px; /* Repeat every 9px vertically */
+    background-image: linear-gradient(
+        rgba(var(--primary-rgb), 0.15) 0px,
+        rgba(var(--primary-rgb), 0.15) 3px,
+        transparent 3px,
+        transparent 9px
+    ); /* Define repeating lines */
+    animation: pan-overlay 22s infinite linear; /* Animate background */
+}
+
+@keyframes pan-overlay {
+    from {
+        background-position: 0% 0%;
+    }
+    to {
+        background-position: 0% -100%; /* Move background vertically */
+    }
+}
+

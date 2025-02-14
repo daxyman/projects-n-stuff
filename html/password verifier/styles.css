@@ -1,0 +1,87 @@
+.page-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper #password {
+  height: 56px;
+  background: rgba(130, 150, 166, 0.2);
+  border: 0;
+  border-radius: 8px;
+  padding: 0px 16px;
+  font-size: 17px;
+  width: 327px;
+}
+
+.password-wrapper #password:focus,
+.password-wrapper #password:active {
+  outline: 0;
+  border: 0;
+}
+
+.password-wrapper #password-strength-indicator {
+  width: 80px;
+  background-color: #fff;
+  height: 8px;
+  border-radius: 100px;
+  padding: 2px;
+  margin: 0;
+  position: absolute;
+  top: calc(50% - 6px);
+  right: 48px;
+}
+
+.password-wrapper
+  #password-strength-indicator
+  #password-strength-indicator-inner {
+  background-color: #cad2d9;
+  height: 100%;
+  transition: width 0.2s ease-out, background-color 0.1s linear;
+  border-radius: 100px;
+  width: 10%;
+}
+
+.password-wrapper
+  #password-strength-indicator[data-strength="0"]
+  #password-strength-indicator-inner {
+  width: 10%;
+  background-color: #cad2d9;
+}
+
+.password-wrapper
+  #password-strength-indicator[data-strength="1"]
+  #password-strength-indicator-inner {
+  width: 25%;
+  background-color: #ff2f2f;
+}
+
+.password-wrapper
+  #password-strength-indicator[data-strength="2"]
+  #password-strength-indicator-inner {
+  width: 50%;
+  background-color: #f2c100;
+}
+
+.password-wrapper
+  #password-strength-indicator[data-strength="3"]
+  #password-strength-indicator-inner {
+  width: 75%;
+  background-color: rgba(34, 172, 0, 0.75);
+}
+
+.password-wrapper
+  #password-strength-indicator[data-strength="4"]
+  #password-strength-indicator-inner {
+  width: 100%;
+  background-color: #22ac00;
+}
+
+
+

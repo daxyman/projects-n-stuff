@@ -1,0 +1,46 @@
+body {
+  background-color: black;
+}
+
+#square0 {
+  background: linear-gradient(to right, #1abc9c, #3498db);
+}
+
+#square1 {
+  background: radial-gradient(circle, #ff0000, #0000ff);
+}
+
+#square2 {
+  background: repeating-linear-gradient(to right, #ff0000, #0000ff 20%);
+}
+
+#square3 {
+  background: repeating-radial-gradient(circle, #ff0000, #0000ff 20%);
+}
+
+#square4 {
+  background: conic-gradient(
+    from 45deg,
+    red,
+    yellow,
+    lime,
+    aqua,
+    blue,
+    magenta,
+    red
+  );
+}
+
+.square {
+  width: 200px;
+  aspect-ratio: 1/2;
+  margin: 5px;
+  font-size: 50px;
+}
+#group {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

@@ -1,22 +1,15 @@
 import "./MainSection.css";
-import "../assets/recipees";
+import AjouterRecette from "./AjouterRecette";
 import ProfileSection from "./ProfileSection";
-
+import Recettes from "./Recettes";
 function MainSection(props) {
+  return (
+    <main>
+      <ProfileSection />
+      <AjouterRecette />
+      <Recettes />
+    </main>
+  );
+}
 
-    return (
-      <>
-      <ProfileSection
-        source={props.source}
-        userName={props.userName}
-        alt={props.alt}
-        profilBio={props.profilBio}
-        posts={props.posts}
-        followers={props.followers}
-        following={props.following}
-        />
-      </>
-    )
-  }
-  
-  export default MainSection
+export default MainSection;

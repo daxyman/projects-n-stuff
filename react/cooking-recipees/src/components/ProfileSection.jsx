@@ -1,5 +1,6 @@
 import "./profileSection.css";
 import React from 'react';
+import {} from "../assets/recipees"
 
 function ProfileSection(props) {
   return (
